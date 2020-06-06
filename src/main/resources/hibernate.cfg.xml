@@ -12,7 +12,8 @@
 <!-- thread for close connection after request   -->
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="hibernate.connection.characterEncoding">utf8</property>
-    <property name="hbm2ddl.auto">update</property>
+<!-- WARNING MUST BE property   -->
+    <property name="hbm2ddl.auto">validate</property>
     <!-- show sql request   -->
     <property name="show_sql">true</property>
 <!--  show sql in hibernate format  -->
