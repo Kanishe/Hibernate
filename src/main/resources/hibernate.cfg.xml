@@ -5,16 +5,20 @@
 <hibernate-configuration>
   <session-factory>
 
-    <property name="connection.url">jdbc:mysql://localhost:3306</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/testhibernate?useSSL=false&amp;serverTimezone=UTC</property>
+    <property name="default_schema">testhibernate</property>
     <property name="connection.username">root</property>
     <property name="connection.password">admin</property>
-    <property name="default_schema">testhibernate</property>
 <!-- thread for close connection after request   -->
     <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.connection.characterEncoding">utf8</property>
+    <property name="hbm2ddl.auto">update</property>
     <!-- show sql request   -->
     <property name="show_sql">true</property>
 <!--  show sql in hibernate format  -->
     <property name="hibernate.format_sql">true</property>
+    <mapping class="entity.Author"/>
+    <mapping class="entity.Book"/>
 
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
