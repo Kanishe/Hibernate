@@ -2,6 +2,8 @@ package entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,5 +21,6 @@ public class Author implements Serializable{
 
     private String name;
     private String second_name;
+
 
 }

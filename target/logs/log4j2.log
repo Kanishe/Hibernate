@@ -1,0 +1,12 @@
+08 июн. 2020 20:55:01,032  [[34mINFO [m] [main] (Start.java|:11) - TEST LOG
+ 08 июн. 2020 20:55:01,200  [[34mINFO [m] [main] (Version.java|:46) - HHH000412: Hibernate Core {5.4.10.Final}
+ 08 июн. 2020 20:55:01,730  [[34mINFO [m] [main] (JavaReflectionManager.java|:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+ 08 июн. 2020 20:55:01,848  [[33mWARN [m] [main] (DriverManagerConnectionProviderImpl.java|:72) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+ 08 июн. 2020 20:55:01,849  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:115) - HHH10001005: using driver [null] at URL [jdbc:mysql://localhost:3306/testhibernate?useSSL=false&serverTimezone=UTC]
+ 08 июн. 2020 20:55:01,850  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:124) - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=root}
+ 08 июн. 2020 20:55:01,850  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:129) - HHH10001003: Autocommit mode: false
+ 08 июн. 2020 20:55:01,853  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:249) - HHH000115: Hibernate connection pool size: 20 (min=1)
+ 08 июн. 2020 20:55:02,107  [[34mINFO [m] [main] (Dialect.java|:172) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ 08 июн. 2020 20:55:02,823  [[34mINFO [m] [main] (DdlTransactionIsolatorNonJtaImpl.java|:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4ed9f7b1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+ 08 июн. 2020 20:55:03,164  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:418) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/testhibernate?useSSL=false&serverTimezone=UTC]
+ 

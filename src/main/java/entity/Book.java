@@ -2,6 +2,8 @@ package entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +15,6 @@ import java.io.Serializable;
 @Getter
 @Setter
 public class Book implements Serializable{
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // генерация ID через Autoincrement в MySQL
     private long id;
