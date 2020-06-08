@@ -13,8 +13,7 @@ public class Start {
 
         for (Author author:new AuthorHelper().getAuthorList()
              ) {
-            System.out.println("author = " + author.getName());
-
+            log.warn(author.getName());
         }
 
 
