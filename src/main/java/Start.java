@@ -8,16 +8,19 @@ public class Start {
 
 
     public static void main(String[] args) {
-        log.info("TEST LOG");
-        Session session = HibernateUtil.getSessionFactory().openSession();
+//        log.info("TEST LOG");
+//        Session session = HibernateUtil.getSessionFactory().openSession();
+//
+//        for (Author author:new AuthorHelper().getAuthorList()
+//             ) {
+//            log.warn(author.getName());
+//        }
+    Author author = new Author("new");
+    new AuthorHelper ().addAuthor(author);
 
-        for (Author author:new AuthorHelper().getAuthorList()
-             ) {
-            log.warn(author.getName());
-        }
 
 
-        HibernateUtil.getSessionFactory().close(); // закрываем фабрику, иначе программа останется в "зависнутом состоянии"
+//        HibernateUtil.getSessionFactory().close(); // закрываем фабрику, иначе программа останется в "зависнутом состоянии"
 
 
     }

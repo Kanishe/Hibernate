@@ -1,12 +1,370 @@
-08 июн. 2020 20:54:31,930  [[34mINFO [m] [main] (Start.java|:11) - TEST LOG
- 08 июн. 2020 20:54:32,099  [[34mINFO [m] [main] (Version.java|:46) - HHH000412: Hibernate Core {5.4.10.Final}
- 08 июн. 2020 20:54:32,614  [[34mINFO [m] [main] (JavaReflectionManager.java|:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
- 08 июн. 2020 20:54:32,724  [[33mWARN [m] [main] (DriverManagerConnectionProviderImpl.java|:72) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
- 08 июн. 2020 20:54:32,725  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:115) - HHH10001005: using driver [null] at URL [jdbc:mysql://localhost:3306/testhibernate?useSSL=false&serverTimezone=UTC]
- 08 июн. 2020 20:54:32,726  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:124) - HHH10001001: Connection properties: {password=****, characterEncoding=utf8, user=root}
- 08 июн. 2020 20:54:32,726  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:129) - HHH10001003: Autocommit mode: false
- 08 июн. 2020 20:54:32,729  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:249) - HHH000115: Hibernate connection pool size: 20 (min=1)
- 08 июн. 2020 20:54:32,954  [[34mINFO [m] [main] (Dialect.java|:172) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
- 08 июн. 2020 20:54:33,701  [[34mINFO [m] [main] (DdlTransactionIsolatorNonJtaImpl.java|:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4ed9f7b1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
- 08 июн. 2020 20:54:33,977  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:418) - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/testhibernate?useSSL=false&serverTimezone=UTC]
+09 июн. 2020 22:00:58,089  [[34mDEBUG[m] [main] (LoggerProviders.java|:158) - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+ 09 июн. 2020 22:00:58,111  [[34mDEBUG[m] [main] (IntegratorServiceImpl.java|:46) - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+ 09 июн. 2020 22:00:58,114  [[34mDEBUG[m] [main] (IntegratorServiceImpl.java|:46) - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+ 09 июн. 2020 22:00:58,122  [[34mDEBUG[m] [main] (IntegratorServiceImpl.java|:46) - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+ 09 июн. 2020 22:00:58,220  [[34mINFO [m] [main] (Version.java|:46) - HHH000412: Hibernate Core {5.4.10.Final}
+ 09 июн. 2020 22:00:58,223  [[34mDEBUG[m] [main] (Environment.java|:199) - HHH000206: hibernate.properties not found
+ 09 июн. 2020 22:00:58,463  [[34mDEBUG[m] [main] (LocalXmlResourceResolver.java|:57) - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+ 09 июн. 2020 22:00:58,464  [[34mDEBUG[m] [main] (LocalXmlResourceResolver.java|:85) - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+ 09 июн. 2020 22:00:58,472  [[34mDEBUG[m] [main] (JaxbCfgProcessor.java|:116) - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+ 09 июн. 2020 22:00:58,743  [[34mDEBUG[m] [main] (ServiceBinding.java|:68) - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+ 09 июн. 2020 22:00:58,764  [[34mDEBUG[m] [main] (RegionFactoryInitiator.java|:118) - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+ 09 июн. 2020 22:00:58,765  [[34mDEBUG[m] [main] (RegionFactoryInitiator.java|:49) - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+ 09 июн. 2020 22:00:58,789  [[34mINFO [m] [main] (JavaReflectionManager.java|:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+ 09 июн. 2020 22:00:58,842  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration boolean -> org.hibernate.type.BooleanType@3301500b
+ 09 июн. 2020 22:00:58,842  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration boolean -> org.hibernate.type.BooleanType@3301500b
+ 09 июн. 2020 22:00:58,843  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@3301500b
+ 09 июн. 2020 22:00:58,844  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@57a4d5ee
+ 09 июн. 2020 22:00:58,844  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration true_false -> org.hibernate.type.TrueFalseType@47a64f7d
+ 09 июн. 2020 22:00:58,845  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration yes_no -> org.hibernate.type.YesNoType@33aa93c
+ 09 июн. 2020 22:00:58,847  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration byte -> org.hibernate.type.ByteType@22ee2d0
+ 09 июн. 2020 22:00:58,847  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration byte -> org.hibernate.type.ByteType@22ee2d0
+ 09 июн. 2020 22:00:58,848  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@22ee2d0
+ 09 июн. 2020 22:00:58,849  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration character -> org.hibernate.type.CharacterType@78e16155
+ 09 июн. 2020 22:00:58,850  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration char -> org.hibernate.type.CharacterType@78e16155
+ 09 июн. 2020 22:00:58,850  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@78e16155
+ 09 июн. 2020 22:00:58,851  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration short -> org.hibernate.type.ShortType@13c612bd
+ 09 июн. 2020 22:00:58,852  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration short -> org.hibernate.type.ShortType@13c612bd
+ 09 июн. 2020 22:00:58,852  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@13c612bd
+ 09 июн. 2020 22:00:58,853  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration integer -> org.hibernate.type.IntegerType@3d526ad9
+ 09 июн. 2020 22:00:58,854  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration int -> org.hibernate.type.IntegerType@3d526ad9
+ 09 июн. 2020 22:00:58,854  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@3d526ad9
+ 09 июн. 2020 22:00:58,855  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration long -> org.hibernate.type.LongType@61a5b4ae
+ 09 июн. 2020 22:00:58,855  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration long -> org.hibernate.type.LongType@61a5b4ae
+ 09 июн. 2020 22:00:58,856  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.lang.Long -> org.hibernate.type.LongType@61a5b4ae
+ 09 июн. 2020 22:00:58,857  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration float -> org.hibernate.type.FloatType@7e8e8651
+ 09 июн. 2020 22:00:58,858  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration float -> org.hibernate.type.FloatType@7e8e8651
+ 09 июн. 2020 22:00:58,858  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@7e8e8651
+ 09 июн. 2020 22:00:58,859  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration double -> org.hibernate.type.DoubleType@4d4d48a6
+ 09 июн. 2020 22:00:58,860  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration double -> org.hibernate.type.DoubleType@4d4d48a6
+ 09 июн. 2020 22:00:58,860  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@4d4d48a6
+ 09 июн. 2020 22:00:58,861  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@2e6ee0bc
+ 09 июн. 2020 22:00:58,861  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@2e6ee0bc
+ 09 июн. 2020 22:00:58,862  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@66b72664
+ 09 июн. 2020 22:00:58,863  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@66b72664
+ 09 июн. 2020 22:00:58,865  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration string -> org.hibernate.type.StringType@74a9c4b0
+ 09 июн. 2020 22:00:58,865  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.lang.String -> org.hibernate.type.StringType@74a9c4b0
+ 09 июн. 2020 22:00:58,866  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@5fd9b663
+ 09 июн. 2020 22:00:58,867  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@1c4ee95c
+ 09 июн. 2020 22:00:58,868  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration url -> org.hibernate.type.UrlType@35e52059
+ 09 июн. 2020 22:00:58,869  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.net.URL -> org.hibernate.type.UrlType@35e52059
+ 09 июн. 2020 22:00:58,870  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration Duration -> org.hibernate.type.DurationType@6e5bfdfc
+ 09 июн. 2020 22:00:58,870  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@6e5bfdfc
+ 09 июн. 2020 22:00:58,874  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration Instant -> org.hibernate.type.InstantType@1c65121
+ 09 июн. 2020 22:00:58,875  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@1c65121
+ 09 июн. 2020 22:00:58,876  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@5a772895
+ 09 июн. 2020 22:00:58,876  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@5a772895
+ 09 июн. 2020 22:00:58,878  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@c0b41d6
+ 09 июн. 2020 22:00:58,878  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@c0b41d6
+ 09 июн. 2020 22:00:58,879  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@7ee55e70
+ 09 июн. 2020 22:00:58,880  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@7ee55e70
+ 09 июн. 2020 22:00:58,882  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@530a8454
+ 09 июн. 2020 22:00:58,882  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@530a8454
+ 09 июн. 2020 22:00:58,883  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@7726e185
+ 09 июн. 2020 22:00:58,883  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@7726e185
+ 09 июн. 2020 22:00:58,885  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@3b4ef7
+ 09 июн. 2020 22:00:58,885  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@3b4ef7
+ 09 июн. 2020 22:00:58,886  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration date -> org.hibernate.type.DateType@5a6d5a8f
+ 09 июн. 2020 22:00:58,887  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5a6d5a8f
+ 09 июн. 2020 22:00:58,888  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration time -> org.hibernate.type.TimeType@44ea608c
+ 09 июн. 2020 22:00:58,888  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@44ea608c
+ 09 июн. 2020 22:00:58,889  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration timestamp -> org.hibernate.type.TimestampType@3b582111
+ 09 июн. 2020 22:00:58,890  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@3b582111
+ 09 июн. 2020 22:00:58,890  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@3b582111
+ 09 июн. 2020 22:00:58,892  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@76b0ae1b
+ 09 июн. 2020 22:00:58,893  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration calendar -> org.hibernate.type.CalendarType@199e4c2b
+ 09 июн. 2020 22:00:58,893  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@199e4c2b
+ 09 июн. 2020 22:00:58,893  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@199e4c2b
+ 09 июн. 2020 22:00:58,894  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@5bf61e67
+ 09 июн. 2020 22:00:58,895  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration locale -> org.hibernate.type.LocaleType@51671b08
+ 09 июн. 2020 22:00:58,895  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@51671b08
+ 09 июн. 2020 22:00:58,896  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration currency -> org.hibernate.type.CurrencyType@26f3d90c
+ 09 июн. 2020 22:00:58,897  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@26f3d90c
+ 09 июн. 2020 22:00:58,898  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration timezone -> org.hibernate.type.TimeZoneType@6c2d4cc6
+ 09 июн. 2020 22:00:58,898  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@6c2d4cc6
+ 09 июн. 2020 22:00:58,899  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration class -> org.hibernate.type.ClassType@2472c7d8
+ 09 июн. 2020 22:00:58,899  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@2472c7d8
+ 09 июн. 2020 22:00:58,900  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@5c84624f
+ 09 июн. 2020 22:00:58,900  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@5c84624f
+ 09 июн. 2020 22:00:58,901  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@2a415aa9
+ 09 июн. 2020 22:00:58,902  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration binary -> org.hibernate.type.BinaryType@5b43e173
+ 09 июн. 2020 22:00:58,902  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration byte[] -> org.hibernate.type.BinaryType@5b43e173
+ 09 июн. 2020 22:00:58,902  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration [B -> org.hibernate.type.BinaryType@5b43e173
+ 09 июн. 2020 22:00:58,903  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@30f4b1a6
+ 09 июн. 2020 22:00:58,903  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@30f4b1a6
+ 09 июн. 2020 22:00:58,904  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@30f4b1a6
+ 09 июн. 2020 22:00:58,904  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration row_version -> org.hibernate.type.RowVersionType@669d2b1b
+ 09 июн. 2020 22:00:58,905  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration image -> org.hibernate.type.ImageType@5298dead
+ 09 июн. 2020 22:00:58,906  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration characters -> org.hibernate.type.CharArrayType@2b50150
+ 09 июн. 2020 22:00:58,907  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration char[] -> org.hibernate.type.CharArrayType@2b50150
+ 09 июн. 2020 22:00:58,907  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration [C -> org.hibernate.type.CharArrayType@2b50150
+ 09 июн. 2020 22:00:58,908  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@17f460bb
+ 09 июн. 2020 22:00:58,909  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@17f460bb
+ 09 июн. 2020 22:00:58,909  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@17f460bb
+ 09 июн. 2020 22:00:58,909  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration text -> org.hibernate.type.TextType@2c0f7678
+ 09 июн. 2020 22:00:58,910  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration ntext -> org.hibernate.type.NTextType@742d4e15
+ 09 июн. 2020 22:00:58,911  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration blob -> org.hibernate.type.BlobType@7a9c84a5
+ 09 июн. 2020 22:00:58,911  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7a9c84a5
+ 09 июн. 2020 22:00:58,912  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@60222fd8
+ 09 июн. 2020 22:00:58,913  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration clob -> org.hibernate.type.ClobType@64711bf2
+ 09 июн. 2020 22:00:58,913  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@64711bf2
+ 09 июн. 2020 22:00:58,915  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration nclob -> org.hibernate.type.NClobType@894858
+ 09 июн. 2020 22:00:58,916  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@894858
+ 09 июн. 2020 22:00:58,916  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@74cf8b28
+ 09 июн. 2020 22:00:58,917  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@73386d72
+ 09 июн. 2020 22:00:58,918  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration serializable -> org.hibernate.type.SerializableType@4943defe
+ 09 июн. 2020 22:00:58,922  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration object -> org.hibernate.type.ObjectType@55b62629
+ 09 июн. 2020 22:00:58,922  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@55b62629
+ 09 июн. 2020 22:00:58,923  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@33a053d
+ 09 июн. 2020 22:00:58,923  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@14a54ef6
+ 09 июн. 2020 22:00:58,923  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@20921b9b
+ 09 июн. 2020 22:00:58,923  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@867ba60
+ 09 июн. 2020 22:00:58,924  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@5ba745bc
+ 09 июн. 2020 22:00:58,924  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@654b72c0
+ 09 июн. 2020 22:00:58,924  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@55b5e331
+ 09 июн. 2020 22:00:58,924  [[34mDEBUG[m] [main] (BasicTypeRegistry.java|:156) - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@6034e75d
+ 09 июн. 2020 22:00:58,956  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+ 09 июн. 2020 22:00:58,957  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+ 09 июн. 2020 22:00:58,958  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+ 09 июн. 2020 22:00:58,959  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+ 09 июн. 2020 22:00:58,960  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+ 09 июн. 2020 22:00:58,961  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+ 09 июн. 2020 22:00:58,962  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+ 09 июн. 2020 22:00:58,964  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+ 09 июн. 2020 22:00:58,965  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+ 09 июн. 2020 22:00:58,966  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+ 09 июн. 2020 22:00:58,967  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+ 09 июн. 2020 22:00:58,968  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+ 09 июн. 2020 22:00:58,968  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+ 09 июн. 2020 22:00:58,969  [[34mDEBUG[m] [main] (DefaultIdentifierGeneratorFactory.java|:81) - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+ 09 июн. 2020 22:00:58,975  [[33mWARN [m] [main] (DriverManagerConnectionProviderImpl.java|:72) - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+ 09 июн. 2020 22:00:58,976  [[34mDEBUG[m] [main] (DriverManagerConnectionProviderImpl.java|:143) - No driver class specified
+ 09 июн. 2020 22:00:58,976  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:115) - HHH10001005: using driver [null] at URL [jdbc:mysql://localhost:3306/testhibernate?useSSL=false&serverTimezone=UTC]
+ 09 июн. 2020 22:00:58,977  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:121) - HHH10001001: Connection properties: {password=admin, characterEncoding=utf8, user=root}
+ 09 июн. 2020 22:00:58,977  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:129) - HHH10001003: Autocommit mode: false
+ 09 июн. 2020 22:00:58,979  [[34mDEBUG[m] [main] (DelegatingBasicLogger.java|:384) - Initializing Connection pool with 1 Connections
+ 09 июн. 2020 22:00:58,980  [[34mINFO [m] [main] (DriverManagerConnectionProviderImpl.java|:249) - HHH000115: Hibernate connection pool size: 20 (min=1)
+ 09 июн. 2020 22:00:59,187  [[34mDEBUG[m] [main] (JdbcEnvironmentInitiator.java|:72) - Database ->
+       name : MySQL
+    version : 8.0.20
+      major : 8
+      minor : 0
+ 09 июн. 2020 22:00:59,188  [[34mDEBUG[m] [main] (JdbcEnvironmentInitiator.java|:83) - Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.20 (Revision: afc0a13cd3c5a0bf57eaa809ee0ee6df1fd5ac9b)
+      major : 8
+      minor : 0
+ 09 июн. 2020 22:00:59,188  [[34mDEBUG[m] [main] (DelegatingBasicLogger.java|:389) - JDBC version : 4.2
+ 09 июн. 2020 22:00:59,212  [[34mINFO [m] [main] (Dialect.java|:172) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ 09 июн. 2020 22:00:59,231  [[34mDEBUG[m] [main] (IdentifierHelperBuilder.java|:113) - JDBC driver metadata reported database stores quoted identifiers in more than one case
+ 09 июн. 2020 22:00:59,263  [[34mDEBUG[m] [main] (IdentifierHelperBuilder.java|:187) - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+ 09 июн. 2020 22:00:59,293  [[34mDEBUG[m] [main] (Namespace.java|:51) - Created database namespace [logicalName=Name{catalog=null, schema=testhibernate}, physicalName=Name{catalog=null, schema=testhibernate}]
+ 09 июн. 2020 22:00:59,296  [[34mDEBUG[m] [main] (TypeConfiguration.java|:152) - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@64b70919] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@4e31c3ec]
+ 09 июн. 2020 22:00:59,362  [[34mDEBUG[m] [main] (AnnotationBinder.java|:557) - Binding entity from annotated class: entity.Author
+ 09 июн. 2020 22:00:59,384  [[34mDEBUG[m] [main] (Ejb3Column.java|:213) - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+ 09 июн. 2020 22:00:59,392  [[34mDEBUG[m] [main] (EntityBinder.java|:430) - Import with entity name Author
+ 09 июн. 2020 22:00:59,400  [[34mDEBUG[m] [main] (EntityBinder.java|:873) - Bind entity entity.Author on table Author
+ 09 июн. 2020 22:00:59,425  [[34mDEBUG[m] [main] (Ejb3Column.java|:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(testhibernate.Author), mappingColumn=id, insertable=true, updatable=true, unique=false}
+ 09 июн. 2020 22:00:59,429  [[34mDEBUG[m] [main] (PropertyBinder.java|:175) - MetadataSourceProcessor property id with lazy=false
+ 09 июн. 2020 22:00:59,431  [[34mDEBUG[m] [main] (AbstractPropertyHolder.java|:94) - Attempting to locate auto-apply AttributeConverter for property [entity.Author:id]
+ 09 июн. 2020 22:00:59,434  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:411) - building SimpleValue for id
+ 09 июн. 2020 22:00:59,436  [[34mDEBUG[m] [main] (PropertyBinder.java|:266) - Building property id
+ 09 июн. 2020 22:00:59,440  [[34mDEBUG[m] [main] (BinderHelper.java|:644) - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+ 09 июн. 2020 22:00:59,441  [[34mDEBUG[m] [main] (Ejb3Column.java|:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(testhibernate.Author), mappingColumn=name, insertable=true, updatable=true, unique=false}
+ 09 июн. 2020 22:00:59,441  [[34mDEBUG[m] [main] (PropertyBinder.java|:175) - MetadataSourceProcessor property name with lazy=false
+ 09 июн. 2020 22:00:59,441  [[34mDEBUG[m] [main] (AbstractPropertyHolder.java|:94) - Attempting to locate auto-apply AttributeConverter for property [entity.Author:name]
+ 09 июн. 2020 22:00:59,442  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:411) - building SimpleValue for name
+ 09 июн. 2020 22:00:59,442  [[34mDEBUG[m] [main] (PropertyBinder.java|:266) - Building property name
+ 09 июн. 2020 22:00:59,442  [[34mDEBUG[m] [main] (Ejb3Column.java|:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(testhibernate.Author), mappingColumn=second_name, insertable=true, updatable=true, unique=false}
+ 09 июн. 2020 22:00:59,443  [[34mDEBUG[m] [main] (PropertyBinder.java|:175) - MetadataSourceProcessor property secondName with lazy=false
+ 09 июн. 2020 22:00:59,443  [[34mDEBUG[m] [main] (AbstractPropertyHolder.java|:94) - Attempting to locate auto-apply AttributeConverter for property [entity.Author:secondName]
+ 09 июн. 2020 22:00:59,443  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:411) - building SimpleValue for secondName
+ 09 июн. 2020 22:00:59,443  [[34mDEBUG[m] [main] (PropertyBinder.java|:266) - Building property secondName
+ 09 июн. 2020 22:00:59,444  [[34mDEBUG[m] [main] (AnnotationBinder.java|:557) - Binding entity from annotated class: entity.Book
+ 09 июн. 2020 22:00:59,445  [[34mDEBUG[m] [main] (Ejb3Column.java|:213) - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+ 09 июн. 2020 22:00:59,445  [[34mDEBUG[m] [main] (EntityBinder.java|:430) - Import with entity name Book
+ 09 июн. 2020 22:00:59,445  [[34mDEBUG[m] [main] (EntityBinder.java|:873) - Bind entity entity.Book on table Book
+ 09 июн. 2020 22:00:59,446  [[34mDEBUG[m] [main] (Ejb3Column.java|:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(testhibernate.Book), mappingColumn=id, insertable=true, updatable=true, unique=false}
+ 09 июн. 2020 22:00:59,447  [[34mDEBUG[m] [main] (PropertyBinder.java|:175) - MetadataSourceProcessor property id with lazy=false
+ 09 июн. 2020 22:00:59,447  [[34mDEBUG[m] [main] (AbstractPropertyHolder.java|:94) - Attempting to locate auto-apply AttributeConverter for property [entity.Book:id]
+ 09 июн. 2020 22:00:59,447  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:411) - building SimpleValue for id
+ 09 июн. 2020 22:00:59,448  [[34mDEBUG[m] [main] (PropertyBinder.java|:266) - Building property id
+ 09 июн. 2020 22:00:59,448  [[34mDEBUG[m] [main] (BinderHelper.java|:644) - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+ 09 июн. 2020 22:00:59,448  [[34mDEBUG[m] [main] (Ejb3Column.java|:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(testhibernate.Book), mappingColumn=author_id, insertable=true, updatable=true, unique=false}
+ 09 июн. 2020 22:00:59,448  [[34mDEBUG[m] [main] (PropertyBinder.java|:175) - MetadataSourceProcessor property author_id with lazy=false
+ 09 июн. 2020 22:00:59,449  [[34mDEBUG[m] [main] (AbstractPropertyHolder.java|:94) - Attempting to locate auto-apply AttributeConverter for property [entity.Book:author_id]
+ 09 июн. 2020 22:00:59,449  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:411) - building SimpleValue for author_id
+ 09 июн. 2020 22:00:59,449  [[34mDEBUG[m] [main] (PropertyBinder.java|:266) - Building property author_id
+ 09 июн. 2020 22:00:59,450  [[34mDEBUG[m] [main] (Ejb3Column.java|:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(testhibernate.Book), mappingColumn=name, insertable=true, updatable=true, unique=false}
+ 09 июн. 2020 22:00:59,450  [[34mDEBUG[m] [main] (PropertyBinder.java|:175) - MetadataSourceProcessor property name with lazy=false
+ 09 июн. 2020 22:00:59,450  [[34mDEBUG[m] [main] (AbstractPropertyHolder.java|:94) - Attempting to locate auto-apply AttributeConverter for property [entity.Book:name]
+ 09 июн. 2020 22:00:59,451  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:411) - building SimpleValue for name
+ 09 июн. 2020 22:00:59,451  [[34mDEBUG[m] [main] (PropertyBinder.java|:266) - Building property name
+ 09 июн. 2020 22:00:59,452  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:456) - Starting fillSimpleValue for id
+ 09 июн. 2020 22:00:59,452  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:456) - Starting fillSimpleValue for name
+ 09 июн. 2020 22:00:59,452  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:456) - Starting fillSimpleValue for secondName
+ 09 июн. 2020 22:00:59,453  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:456) - Starting fillSimpleValue for id
+ 09 июн. 2020 22:00:59,453  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:456) - Starting fillSimpleValue for author_id
+ 09 июн. 2020 22:00:59,453  [[34mDEBUG[m] [main] (SimpleValueBinder.java|:456) - Starting fillSimpleValue for name
+ 09 июн. 2020 22:00:59,454  [[34mDEBUG[m] [main] (PrimaryKey.java|:35) - Forcing column [id] to be non-null as it is part of the primary key for table [author]
+ 09 июн. 2020 22:00:59,454  [[34mDEBUG[m] [main] (PrimaryKey.java|:35) - Forcing column [id] to be non-null as it is part of the primary key for table [book]
+ 09 июн. 2020 22:00:59,525  [[34mDEBUG[m] [main] (SessionFactoryImpl.java|:207) - Building session factory
+ 09 июн. 2020 22:00:59,526  [[34mDEBUG[m] [main] (Settings.java|:68) - SessionFactory name : null
+ 09 июн. 2020 22:00:59,526  [[34mDEBUG[m] [main] (Settings.java|:69) - Automatic flush during beforeCompletion(): enabled
+ 09 июн. 2020 22:00:59,526  [[34mDEBUG[m] [main] (Settings.java|:70) - Automatic session close at end of transaction: disabled
+ 09 июн. 2020 22:00:59,527  [[34mDEBUG[m] [main] (Settings.java|:72) - Statistics: disabled
+ 09 июн. 2020 22:00:59,527  [[34mDEBUG[m] [main] (Settings.java|:74) - Deleted entity synthetic identifier rollback: disabled
+ 09 июн. 2020 22:00:59,527  [[34mDEBUG[m] [main] (Settings.java|:75) - Default entity-mode: pojo
+ 09 июн. 2020 22:00:59,527  [[34mDEBUG[m] [main] (Settings.java|:76) - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+ 09 июн. 2020 22:00:59,527  [[34mDEBUG[m] [main] (Settings.java|:77) - Allow initialization of lazy state outside session : disabled
+ 09 июн. 2020 22:00:59,527  [[34mDEBUG[m] [main] (Settings.java|:79) - Using BatchFetchStyle : LEGACY
+ 09 июн. 2020 22:00:59,528  [[34mDEBUG[m] [main] (Settings.java|:80) - Default batch fetch size: -1
+ 09 июн. 2020 22:00:59,528  [[34mDEBUG[m] [main] (Settings.java|:81) - Maximum outer join fetch depth: 2
+ 09 июн. 2020 22:00:59,528  [[34mDEBUG[m] [main] (Settings.java|:82) - Default null ordering: NONE
+ 09 июн. 2020 22:00:59,528  [[34mDEBUG[m] [main] (Settings.java|:83) - Order SQL updates by primary key: disabled
+ 09 июн. 2020 22:00:59,528  [[34mDEBUG[m] [main] (Settings.java|:84) - Order SQL inserts for batching: disabled
+ 09 июн. 2020 22:00:59,528  [[34mDEBUG[m] [main] (Settings.java|:86) - multi-tenancy strategy : NONE
+ 09 июн. 2020 22:00:59,529  [[34mDEBUG[m] [main] (Settings.java|:88) - JTA Track by Thread: enabled
+ 09 июн. 2020 22:00:59,529  [[34mDEBUG[m] [main] (Settings.java|:90) - Query language substitutions: {}
+ 09 июн. 2020 22:00:59,529  [[34mDEBUG[m] [main] (Settings.java|:91) - Named query checking : enabled
+ 09 июн. 2020 22:00:59,529  [[34mDEBUG[m] [main] (Settings.java|:93) - Second-level cache: disabled
+ 09 июн. 2020 22:00:59,529  [[34mDEBUG[m] [main] (Settings.java|:94) - Second-level query cache: disabled
+ 09 июн. 2020 22:00:59,529  [[34mDEBUG[m] [main] (Settings.java|:95) - Second-level query cache factory: null
+ 09 июн. 2020 22:00:59,530  [[34mDEBUG[m] [main] (Settings.java|:96) - Second-level cache region prefix: null
+ 09 июн. 2020 22:00:59,530  [[34mDEBUG[m] [main] (Settings.java|:97) - Optimize second-level cache for minimal puts: disabled
+ 09 июн. 2020 22:00:59,530  [[34mDEBUG[m] [main] (Settings.java|:98) - Structured second-level cache entries: disabled
+ 09 июн. 2020 22:00:59,530  [[34mDEBUG[m] [main] (Settings.java|:99) - Second-level cache direct-reference entries: disabled
+ 09 июн. 2020 22:00:59,530  [[34mDEBUG[m] [main] (Settings.java|:100) - Automatic eviction of collection cache: disabled
+ 09 июн. 2020 22:00:59,530  [[34mDEBUG[m] [main] (Settings.java|:102) - JDBC batch size: 15
+ 09 июн. 2020 22:00:59,531  [[34mDEBUG[m] [main] (Settings.java|:103) - JDBC batch updates for versioned data: enabled
+ 09 июн. 2020 22:00:59,531  [[34mDEBUG[m] [main] (Settings.java|:104) - Scrollable result sets: enabled
+ 09 июн. 2020 22:00:59,531  [[34mDEBUG[m] [main] (Settings.java|:105) - Wrap result sets: disabled
+ 09 июн. 2020 22:00:59,531  [[34mDEBUG[m] [main] (Settings.java|:106) - JDBC3 getGeneratedKeys(): enabled
+ 09 июн. 2020 22:00:59,531  [[34mDEBUG[m] [main] (Settings.java|:107) - JDBC result set fetch size: null
+ 09 июн. 2020 22:00:59,532  [[34mDEBUG[m] [main] (Settings.java|:108) - Connection release mode: AFTER_TRANSACTION
+ 09 июн. 2020 22:00:59,532  [[34mDEBUG[m] [main] (Settings.java|:109) - Generate SQL with comments: disabled
+ 09 июн. 2020 22:00:59,532  [[34mDEBUG[m] [main] (Settings.java|:111) - JPA compliance - query : disabled
+ 09 июн. 2020 22:00:59,532  [[34mDEBUG[m] [main] (Settings.java|:112) - JPA compliance - closed-handling : disabled
+ 09 июн. 2020 22:00:59,532  [[34mDEBUG[m] [main] (Settings.java|:113) - JPA compliance - lists : disabled
+ 09 июн. 2020 22:00:59,532  [[34mDEBUG[m] [main] (Settings.java|:114) - JPA compliance - transactions : disabled
+ 09 июн. 2020 22:00:59,596  [[34mDEBUG[m] [main] (SessionFactoryImpl.java|:262) - Session factory constructed with filter configurations : {}
+ 09 июн. 2020 22:00:59,597  [[34mDEBUG[m] [main] (SessionFactoryImpl.java|:263) - Instantiating session factory with properties: {hibernate.format_sql=true, hibernate.connection.characterEncoding=utf8, java.specification.version=13, sun.jnu.encoding=UTF-8, java.class.path=/Users/aka/IdeaProjects/Hibernate/out/production/classes:/Users/aka/IdeaProjects/Hibernate/out/production/resources:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.10.Final/365690f87b040dc5d22cc24a4daff76d1cffef23/hibernate-core-5.4.10.Final.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/mysql/mysql-connector-java/8.0.20/d8d388e71c823570662a45dd33f4284141921280/mysql-connector-java-8.0.20.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.13.3/4e857439fc4fe974d212adaaaa3b118b8b50e3ec/log4j-core-2.13.3.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.13.3/ec1508160b93d274b1add34419b897bae84c6ca9/log4j-api-2.13.3.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/5.1.0.Final/700aeedc4a2089816621948f0379e17cbd17d5db/hibernate-commons-annotations-5.1.0.Final.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.2.Final/3789d00e859632e6c6206adc0c71625559e6e3b0/jboss-logging-3.3.2.Final.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/25665ac8c0b62f50e6488173233239120fc52c96/javax.persistence-api-2.2.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.javassist/javassist/3.24.0-GA/d7466fc2e3af7c023e95c510f06448ad29b225b3/javassist-3.24.0-GA.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.10.2/7e575b4d8eb3041728fb7dac4fa09bf163c5ee9/byte-buddy-1.10.2.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/a8485cab9484dda36e9a8c319e76b5cc18797b58/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.jboss/jandex/2.1.1.Final/c89aa5564fea8b08b9b41f0bbcabb8fed0d89c0d/jandex-2.1.1.Final.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/com.fasterxml/classmate/1.5.1/3fe0bed568c62df5e89f4f174c101eab25345b6c/classmate-1.5.1.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/jaxb-runtime-2.3.1.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.3.1/8531ad5ac454cc2deb9d4d32c40c4d7451939b5d/jaxb-api-2.3.1.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/javax.activation/javax.activation-api/1.2.0/85262acf3ca9816f9537ca47d5adeabaead7cb16/javax.activation-api-1.2.0.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.dom4j/dom4j/2.1.1/3dce5dbb3571aa820c677fadd8349bfa8f00c199/dom4j-2.1.1.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.6.1/d06d46ecfd92ec6d0f3b423b4cd81cb38d8b924/protobuf-java-3.6.1.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.3.1/a09d2c48d3285f206fafbffe0e50619284e92126/txw2-2.3.1.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.7/c197c86ceec7318b1284bffb49b54226ca774003/istack-commons-runtime-3.0.7.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/org.jvnet.staxex/stax-ex/1.8/8cc35f73da321c29973191f2cf143d29d26a1df7/stax-ex-1.8.jar:/Users/aka/dev_tools/gradle-6.5/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.15/bb7b7ec0379982b97c62cd17465cb6d9155f68e8/FastInfoset-1.2.15.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, hbm2ddl.auto=validate, java.vendor.url=https://java.oracle.com/, user.timezone=Europe/Moscow, java.vm.specification.version=13, os.name=Mac OS X, sun.java.launcher=SUN_STANDARD, user.country=RU, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk-13.0.2.jdk/Contents/Home/lib, sun.java.command=Start, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, jdk.debug=release, sun.cpu.endian=little, user.home=/Users/aka, user.language=ru, java.specification.vendor=Oracle Corporation, java.version.date=2020-01-14, java.home=/Library/Java/JavaVirtualMachines/jdk-13.0.2.jdk/Contents/Home, file.separator=/, java.vm.compressedOopsMode=Zero based, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.hbm2ddl.auto=validate, connection.password=admin, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.runtime.version=13.0.2+8, user.name=aka, path.separator=:, hibernate.connection.username=****, os.version=10.15.5, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/testhibernate?useSSL=false&serverTimezone=UTC, default_schema=testhibernate, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, hibernate.current_session_context_class=thread, show_sql=true, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=/var/folders/63/k24jw8mj5s56_mywcdg2zgnr0000gn/T/, java.version=13.0.2, user.dir=/Users/aka/IdeaProjects/Hibernate, os.arch=x86_64, connection.username=root, java.vm.specification.name=Java Virtual Machine Specification, hibernate.default_schema=testhibernate, hibernate.connection.password=****, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@1292071f, java.library.path=/Users/aka/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor=Oracle Corporation, java.vm.info=mixed mode, sharing, java.vm.version=13.0.2+8, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeBig, connection.url=jdbc:mysql://localhost:3306/testhibernate?useSSL=false&serverTimezone=UTC, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.class.version=57.0}
+ 09 июн. 2020 22:00:59,613  [[34mDEBUG[m] [main] (JaccIntegrator.java|:80) - Skipping JACC integration as it was not enabled
+ 09 июн. 2020 22:00:59,614  [[34mDEBUG[m] [main] (SessionFactoryImpl.java|:302) - Instantiated session factory
+ 09 июн. 2020 22:00:59,614  [[34mDEBUG[m] [main] (TypeConfiguration.java|:157) - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@64b70919] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@51c959a4]
+ 09 июн. 2020 22:00:59,668  [[34mDEBUG[m] [main] (ClassLoaderAccessImpl.java|:60) - Not known whether passed class name [entity.Author] is safe
+ 09 июн. 2020 22:00:59,669  [[34mDEBUG[m] [main] (ClassLoaderAccessImpl.java|:62) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : entity.Author
+ 09 июн. 2020 22:00:59,688  [[34mDEBUG[m] [main] (ClassLoaderAccessImpl.java|:60) - Not known whether passed class name [entity.Author] is safe
+ 09 июн. 2020 22:00:59,688  [[34mDEBUG[m] [main] (ClassLoaderAccessImpl.java|:62) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : entity.Author
+ 09 июн. 2020 22:00:59,931  [[34mDEBUG[m] [main] (ClassLoaderAccessImpl.java|:60) - Not known whether passed class name [entity.Book] is safe
+ 09 июн. 2020 22:00:59,931  [[34mDEBUG[m] [main] (ClassLoaderAccessImpl.java|:62) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : entity.Book
+ 09 июн. 2020 22:00:59,931  [[34mDEBUG[m] [main] (ClassLoaderAccessImpl.java|:60) - Not known whether passed class name [entity.Book] is safe
+ 09 июн. 2020 22:00:59,932  [[34mDEBUG[m] [main] (ClassLoaderAccessImpl.java|:62) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : entity.Book
+ 09 июн. 2020 22:00:59,952  [[34mDEBUG[m] [main] (AbstractEntityPersister.java|:3847) - Static SQL for entity: entity.Author
+ 09 июн. 2020 22:00:59,953  [[34mDEBUG[m] [main] (AbstractEntityPersister.java|:3852) -  Version select: select id from Author where id =?
+ 09 июн. 2020 22:00:59,953  [[34mDEBUG[m] [main] (AbstractEntityPersister.java|:3855) -  Snapshot select: select author_.id, author_.name as name2_0_, author_.second_name as second_n3_0_ from Author author_ where author_.id=?
+ 09 июн. 2020 22:00:59,953  [[34mDEBUG[m] [main] (DelegatingBasicLogger.java|:394) -  Insert 0: insert into Author (name, second_name, id) values (?, ?, ?)
+ 09 июн. 2020 22:00:59,953  [[34mDEBUG[m] [main] (DelegatingBasicLogger.java|:394) -  Update 0: update Author set name=?, second_name=? where id=?
+ 09 июн. 2020 22:00:59,954  [[34mDEBUG[m] [main] (DelegatingBasicLogger.java|:394) -  Delete 0: delete from Author where id=?
+ 09 июн. 2020 22:00:59,954  [[34mDEBUG[m] [main] (AbstractEntityPersister.java|:3863) -  Identity insert: insert into Author (name, second_name) values (?, ?)
+ 09 июн. 2020 22:00:59,982  [[34mDEBUG[m] [main] (QuerySpacesImpl.java|:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@d675f9f]
+ 09 июн. 2020 22:00:59,983  [[34mDEBUG[m] [main] (MetamodelGraphWalker.java|:146) - Visiting attribute path : name
+ 09 июн. 2020 22:00:59,983  [[34mDEBUG[m] [main] (MetamodelGraphWalker.java|:146) - Visiting attribute path : secondName
+ 09 июн. 2020 22:00:59,984  [[34mDEBUG[m] [main] (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java|:150) - Building LoadPlan...
+ 09 июн. 2020 22:00:59,996  [[34mDEBUG[m] [main] (LoadQueryJoinAndFetchProcessor.java|:102) - processing queryspace <gen:0>
+ 09 июн. 2020 22:01:00,001  [[34mDEBUG[m] [main] (LoadPlanTreePrinter.java|:55) - LoadPlan(entity=entity.Author)
+    - Returns
+       - EntityReturnImpl(entity=entity.Author, querySpaceUid=<gen:0>, path=entity.Author)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entity.Author)
+          - SQL table alias mapping - author0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+ 09 июн. 2020 22:01:00,003  [[34mDEBUG[m] [main] (EntityLoader.java|:137) - Static select for entity entity.Author [NONE]: select author0_.id as id1_0_0_, author0_.name as name2_0_0_, author0_.second_name as second_n3_0_0_ from Author author0_ where author0_.id=?
+ 09 июн. 2020 22:01:00,003  [[34mDEBUG[m] [main] (QuerySpacesImpl.java|:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@78422efb]
+ 09 июн. 2020 22:01:00,003  [[34mDEBUG[m] [main] (MetamodelGraphWalker.java|:146) - Visiting attribute path : name
+ 09 июн. 2020 22:01:00,004  [[34mDEBUG[m] [main] (MetamodelGraphWalker.java|:146) - Visiting attribute path : secondName
+ 09 июн. 2020 22:01:00,004  [[34mDEBUG[m] [main] (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java|:150) - Building LoadPlan...
+ 09 июн. 2020 22:01:00,004  [[34mDEBUG[m] [main] (LoadQueryJoinAndFetchProcessor.java|:102) - processing queryspace <gen:0>
+ 09 июн. 2020 22:01:00,005  [[34mDEBUG[m] [main] (LoadPlanTreePrinter.java|:55) - LoadPlan(entity=entity.Author)
+    - Returns
+       - EntityReturnImpl(entity=entity.Author, querySpaceUid=<gen:0>, path=entity.Author)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entity.Author)
+          - SQL table alias mapping - author0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+ 09 июн. 2020 22:01:00,005  [[34mDEBUG[m] [main] (EntityLoader.java|:137) - Static select for entity entity.Author [READ]: select author0_.id as id1_0_0_, author0_.name as name2_0_0_, author0_.second_name as second_n3_0_0_ from Author author0_ where author0_.id=?
+ 09 июн. 2020 22:01:00,020  [[34mDEBUG[m] [main] (CascadeEntityLoader.java|:38) - Static select for action ACTION_MERGE on entity entity.Author: select author0_.id as id1_0_0_, author0_.name as name2_0_0_, author0_.second_name as second_n3_0_0_ from Author author0_ where author0_.id=?
+ 09 июн. 2020 22:01:00,021  [[34mDEBUG[m] [main] (CascadeEntityLoader.java|:38) - Static select for action ACTION_REFRESH on entity entity.Author: select author0_.id as id1_0_0_, author0_.name as name2_0_0_, author0_.second_name as second_n3_0_0_ from Author author0_ where author0_.id=?
+ 09 июн. 2020 22:01:00,021  [[34mDEBUG[m] [main] (AbstractEntityPersister.java|:3847) - Static SQL for entity: entity.Book
+ 09 июн. 2020 22:01:00,021  [[34mDEBUG[m] [main] (AbstractEntityPersister.java|:3852) -  Version select: select id from Book where id =?
+ 09 июн. 2020 22:01:00,021  [[34mDEBUG[m] [main] (AbstractEntityPersister.java|:3855) -  Snapshot select: select book_.id, book_.author_id as author_i2_1_, book_.name as name3_1_ from Book book_ where book_.id=?
+ 09 июн. 2020 22:01:00,022  [[34mDEBUG[m] [main] (DelegatingBasicLogger.java|:394) -  Insert 0: insert into Book (author_id, name, id) values (?, ?, ?)
+ 09 июн. 2020 22:01:00,022  [[34mDEBUG[m] [main] (DelegatingBasicLogger.java|:394) -  Update 0: update Book set author_id=?, name=? where id=?
+ 09 июн. 2020 22:01:00,022  [[34mDEBUG[m] [main] (DelegatingBasicLogger.java|:394) -  Delete 0: delete from Book where id=?
+ 09 июн. 2020 22:01:00,022  [[34mDEBUG[m] [main] (AbstractEntityPersister.java|:3863) -  Identity insert: insert into Book (author_id, name) values (?, ?)
+ 09 июн. 2020 22:01:00,023  [[34mDEBUG[m] [main] (QuerySpacesImpl.java|:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@53ce2392]
+ 09 июн. 2020 22:01:00,023  [[34mDEBUG[m] [main] (MetamodelGraphWalker.java|:146) - Visiting attribute path : author_id
+ 09 июн. 2020 22:01:00,023  [[34mDEBUG[m] [main] (MetamodelGraphWalker.java|:146) - Visiting attribute path : name
+ 09 июн. 2020 22:01:00,024  [[34mDEBUG[m] [main] (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java|:150) - Building LoadPlan...
+ 09 июн. 2020 22:01:00,024  [[34mDEBUG[m] [main] (LoadQueryJoinAndFetchProcessor.java|:102) - processing queryspace <gen:0>
+ 09 июн. 2020 22:01:00,024  [[34mDEBUG[m] [main] (LoadPlanTreePrinter.java|:55) - LoadPlan(entity=entity.Book)
+    - Returns
+       - EntityReturnImpl(entity=entity.Book, querySpaceUid=<gen:0>, path=entity.Book)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entity.Book)
+          - SQL table alias mapping - book0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+ 09 июн. 2020 22:01:00,025  [[34mDEBUG[m] [main] (EntityLoader.java|:137) - Static select for entity entity.Book [NONE]: select book0_.id as id1_1_0_, book0_.author_id as author_i2_1_0_, book0_.name as name3_1_0_ from Book book0_ where book0_.id=?
+ 09 июн. 2020 22:01:00,025  [[34mDEBUG[m] [main] (QuerySpacesImpl.java|:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1c067c0d]
+ 09 июн. 2020 22:01:00,025  [[34mDEBUG[m] [main] (MetamodelGraphWalker.java|:146) - Visiting attribute path : author_id
+ 09 июн. 2020 22:01:00,025  [[34mDEBUG[m] [main] (MetamodelGraphWalker.java|:146) - Visiting attribute path : name
+ 09 июн. 2020 22:01:00,025  [[34mDEBUG[m] [main] (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java|:150) - Building LoadPlan...
+ 09 июн. 2020 22:01:00,026  [[34mDEBUG[m] [main] (LoadQueryJoinAndFetchProcessor.java|:102) - processing queryspace <gen:0>
+ 09 июн. 2020 22:01:00,026  [[34mDEBUG[m] [main] (LoadPlanTreePrinter.java|:55) - LoadPlan(entity=entity.Book)
+    - Returns
+       - EntityReturnImpl(entity=entity.Book, querySpaceUid=<gen:0>, path=entity.Book)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entity.Book)
+          - SQL table alias mapping - book0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+ 09 июн. 2020 22:01:00,026  [[34mDEBUG[m] [main] (EntityLoader.java|:137) - Static select for entity entity.Book [READ]: select book0_.id as id1_1_0_, book0_.author_id as author_i2_1_0_, book0_.name as name3_1_0_ from Book book0_ where book0_.id=?
+ 09 июн. 2020 22:01:00,027  [[34mDEBUG[m] [main] (CascadeEntityLoader.java|:38) - Static select for action ACTION_MERGE on entity entity.Book: select book0_.id as id1_1_0_, book0_.author_id as author_i2_1_0_, book0_.name as name3_1_0_ from Book book0_ where book0_.id=?
+ 09 июн. 2020 22:01:00,027  [[34mDEBUG[m] [main] (CascadeEntityLoader.java|:38) - Static select for action ACTION_REFRESH on entity entity.Book: select book0_.id as id1_1_0_, book0_.author_id as author_i2_1_0_, book0_.name as name3_1_0_ from Book book0_ where book0_.id=?
+ 09 июн. 2020 22:01:00,066  [[34mINFO [m] [main] (DdlTransactionIsolatorNonJtaImpl.java|:47) - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2da99821] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+ 09 июн. 2020 22:01:00,097  [[34mDEBUG[m] [main] (NamedQueryRepository.java|:151) - Checking 0 named HQL queries
+ 09 июн. 2020 22:01:00,098  [[34mDEBUG[m] [main] (NamedQueryRepository.java|:167) - Checking 0 named SQL queries
+ 09 июн. 2020 22:01:00,105  [[34mDEBUG[m] [main] (SessionFactoryRegistry.java|:52) - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@2792b416
+ 09 июн. 2020 22:01:00,106  [[34mDEBUG[m] [main] (SessionFactoryRegistry.java|:74) - Registering SessionFactory: 2b070aab-a165-487b-9317-14328b701bed (<unnamed>)
+ 09 июн. 2020 22:01:00,107  [[34mDEBUG[m] [main] (SessionFactoryRegistry.java|:81) - Not binding SessionFactory to JNDI, no JNDI name configured
+ 09 июн. 2020 22:01:00,167  [[34mDEBUG[m] [main] (StatisticsInitiator.java|:101) - Statistics initialized [enabled=false]
+ 09 июн. 2020 22:01:00,179  [[34mDEBUG[m] [main] (TransactionImpl.java|:53) - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+ 09 июн. 2020 22:01:00,180  [[34mDEBUG[m] [main] (TransactionImpl.java|:81) - begin
+ 09 июн. 2020 22:01:00,198  [[34mDEBUG[m] [main] (ActionQueue.java|:281) - Executing identity-insert immediately
+ 09 июн. 2020 22:01:00,203  [[34mDEBUG[m] [main] (SqlStatementLogger.java|:127) - 
+    insert 
+    into
+        Author
+        (name) 
+    values
+        (?)
+ 09 июн. 2020 22:01:00,212  [[34mDEBUG[m] [main] (IdentifierGeneratorHelper.java|:78) - Natively generated identity: 29
+ 09 июн. 2020 22:01:00,213  [[34mDEBUG[m] [main] (ResourceRegistryStandardImpl.java|:106) - HHH000387: ResultSet's statement was not registered
+ 09 июн. 2020 22:01:00,215  [[34mDEBUG[m] [main] (TransactionImpl.java|:98) - committing
+ 09 июн. 2020 22:01:00,216  [[34mDEBUG[m] [main] (AbstractFlushingEventListener.java|:139) - Processing flush-time cascades
+ 09 июн. 2020 22:01:00,217  [[34mDEBUG[m] [main] (AbstractFlushingEventListener.java|:192) - Dirty checking collections
+ 09 июн. 2020 22:01:00,220  [[34mDEBUG[m] [main] (AbstractFlushingEventListener.java|:113) - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+ 09 июн. 2020 22:01:00,221  [[34mDEBUG[m] [main] (AbstractFlushingEventListener.java|:120) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+ 09 июн. 2020 22:01:00,222  [[34mDEBUG[m] [main] (EntityPrinter.java|:110) - Listing entities:
+ 09 июн. 2020 22:01:00,223  [[34mDEBUG[m] [main] (EntityPrinter.java|:117) - entity.Author{name=new, id=29, secondName=null}
+ 09 июн. 2020 22:01:00,231  [[34mDEBUG[m] [main] (LogicalConnectionManagedImpl.java|:159) - Initiating JDBC connection release from afterTransaction
+ 09 июн. 2020 22:01:00,234  [[34mDEBUG[m] [main] (LogicalConnectionManagedImpl.java|:159) - Initiating JDBC connection release from afterTransaction
  
